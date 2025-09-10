@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: env-app
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: env-app
+  template:
+    metadata:
+      labels:
+        app: env-app
+    spec:
+      containers:
+        - name: envvars-html
+          image: "anilho/envvars:latest"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+          env:
+            - name: USER
+              value: {{ .Values.env.USER | quote }}
+            - name: APP_ENV
+              value: {{ .Values.env.APP_ENV | quote }}
+            - name: DATABASE_URL
+              value: {{ .Values.env.DATABASE_URL | quote }}
+

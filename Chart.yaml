@@ -1,0 +1,5 @@
+apiVersion: v2
+name: envvars-html
+description: Simple app to render env vars in HTML
+version: 0.1.0
+appVersion: "1.0"
