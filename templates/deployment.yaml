@@ -19,7 +19,7 @@ spec:
           ports:
             - containerPort: 80
           env:
-            - name: user
-              value: {{ .Values.env.user | quote }}
+            - name: USER
+              value: {{ .Values.env.USER | quote }}
 
 
