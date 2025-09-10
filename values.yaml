@@ -1,0 +1,12 @@
+replicaCount: 1
+
+
+
+env:
+  USER: "misterT"
+  APP_ENV: "production"
+  DATABASE_URL: "db.aclass.local"
+
+service:
+  type: ClusterIP
+  port: 80
