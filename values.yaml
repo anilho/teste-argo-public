@@ -3,7 +3,7 @@ replicaCount: 1
 
 
 env:
-  USER: "misterT"
+  USER: "awsparameterstore:/teste/alicio/user"
   APP_ENV: "production"
   DATABASE_URL: "db.aclass.local"
 
